@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -15,6 +17,7 @@ public class Main {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st;
 
 		N = Integer.parseInt(br.readLine());
@@ -61,6 +64,8 @@ public class Main {
 				continue;
 			sb.append(type[i].alpa);
 		}
-		System.out.println(sb.toString());
+		bw.write(sb.toString());
+        bw.close();
+        br.close();
 	}
 }
